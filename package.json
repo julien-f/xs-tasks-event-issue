@@ -1,0 +1,61 @@
+{
+  "private": true,
+  "name": "",
+  "version": "0.0.0",
+  "license": "ISC",
+  "description": "",
+  "keywords": [],
+  "homepage": "",
+  "bugs": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": {
+    "name": "Julien Fontanet",
+    "email": "julien.fontanet@isonoe.net"
+  },
+  "preferGlobal": false,
+  "bin": {},
+  "files": [
+    "*.js"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.11.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "jest": "^21.3.0-beta.10"
+  },
+  "scripts": {
+    "commitmsg": "npm test",
+    "cz": "git-cz",
+    "dev-test": "jest --bail --watch",
+    "pretest": "eslint --ignore-path .gitignore .",
+    "predev": "npm run prebuild",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "testEnvironment": "node",
+    "testRegex": "\\.spec\\.js$"
+  },
+  "dependencies": {
+    "golike-defer": "^0.3.0",
+    "xen-api": "^0.15.1"
+  }
+}
